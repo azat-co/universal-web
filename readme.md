@@ -414,3 +414,6 @@ const store = createStore(counterApp, initialState)
 
 # The End
 
+Simple boilerplate: <https://github.com/azat-co/react/tree/master/ch8/board-react2>
+
+Slides: <https://github.com/azat-co/universal-web>
