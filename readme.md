@@ -414,8 +414,14 @@ const store = createStore(counterApp, initialState)
 
 # The End
 
-Simple boilerplate: <https://github.com/azat-co/react/tree/master/ch8/board-react2>
+Example: <https://github.com/azat-co/react-quickly/tree/master/projects/autocomplete>
 
 Slides: <https://github.com/azat-co/universal-web>
 
 React book: <http://reactquickly.co>
+
+---
+
+# Workshop
+
+<https://github.com/azat-co/react-quickly/tree/master/ch16/message-board>
