@@ -11,9 +11,12 @@ const express = require('express'),
   compression = require('compression'),
   url = 'mongodb://localhost:27017/board'
 
-// TODO: Import React library
+const React = require('react'),
+  ReactDOMServer = require('react-dom/server')
 
-// TODO: Import React components
+const Header = React.createFactory(require('./components/header'))
+const Footer = React.createFactory(require('./components/footer'))
+const MessageBoard = React.createFactory(require('./components/board'))
 
 mongodb.MongoClient.connect(url, function(err, db) {
   if (err) {
@@ -60,8 +63,13 @@ mongodb.MongoClient.connect(url, function(err, db) {
   app.get('/', function(req, res, next){
     req.messages.find({}, {sort: {_id: -1}}).toArray(function(err, docs){
       if (err) return next(err)
-      res.render('index', {})
-      // TODO: Render HTML and data
+      res.render('index', {
+        header: ReactDOMServer.renderToString(Header()),
+        footer: ReactDOMServer.renderToString(Footer()),
+        messageBoard: ReactDOMServer.renderToString(MessageBoard({messages: docs})),
+        props: '<script type="text/javascript">var messages='+JSON.stringify(docs)+'</script>'
+      })
+
     })
   })
 

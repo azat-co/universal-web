@@ -55,8 +55,7 @@
 	
 	ReactDOM.render(React.createElement(Header, null), document.getElementById('header'));
 	ReactDOM.render(React.createElement(Footer, null), document.getElementById('footer'));
-	// TODO: Pass data to MessageBoard
-	ReactDOM.render(React.createElement(MessageBoard, { messages: [] }), document.getElementById('message-board'));
+	ReactDOM.render(React.createElement(MessageBoard, { messages: window.messages }), document.getElementById('message-board'));
 
 /***/ },
 /* 1 */

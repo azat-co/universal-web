@@ -9,5 +9,4 @@ const MessageBoard = require('../components/board.jsx')
 
 ReactDOM.render(<Header />, document.getElementById('header'))
 ReactDOM.render(<Footer />, document.getElementById('footer'))
-// TODO: Pass data to MessageBoard
-ReactDOM.render(<MessageBoard messages={[]}/>, document.getElementById('message-board'))
+ReactDOM.render(<MessageBoard messages={window.messages}/>, document.getElementById('message-board'))
