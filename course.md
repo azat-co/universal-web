@@ -132,7 +132,7 @@ One-way binding: views are simple functions of props
 
 # Demo
 
-<https://github.com/azat-co/react/tree/master/ch8/board-react2>
+<https://github.com/azat-co/universal-web/tree/master/code/message-board>
 
 ---
 
@@ -148,7 +148,7 @@ Azat Mardan @azat_co
 
 
 
-# React for server-side
+# React for Server
 
 ```js
 let React = require('react')
@@ -163,11 +163,9 @@ class MyComponent extends React.Component {
 ReactDOMServer.renderToString(<MyComponent />)
 ```
 
-TK check
-
 ---
 
-# react-express-view
+# `react-express-view`
 
 
 ```js
@@ -207,7 +205,7 @@ ReactDOM.render(<MyComponent messages={window.__data}/>, document.getElementById
 # Browser React Example
 
 ```js
-// app.js - loaded only on  browser
+// app.js - loaded only on browser
 React = require('react')
 ReactDOM = require('react-dom')
 
@@ -219,6 +217,9 @@ ReactDOM.render(<MessageBoard messages={messages}/>, document.getElementById('me
 ```
 
 ---
+
+
+
 
 # Express Route Example
 
@@ -247,6 +248,16 @@ app.get('/', function(req, res, next){
   </div>
 </div>
 ```
+
+---
+
+# Universal Web
+## Universal Routing
+
+![inline 100%](images/azat.jpeg)
+Azat Mardan @azat_co
+
+![inline right](images/nu.png)
 
 ---
 
@@ -326,6 +337,17 @@ match({ history, routes }, (error, redirectLocation, renderProps) => {
   render(<Router {...renderProps} />, mountNode)
 })
 ```
+
+---
+
+
+# Universal Web
+## Universal Data
+
+![inline 100%](images/azat.jpeg)
+Azat Mardan @azat_co
+
+![inline right](images/nu.png)
 
 ---
 
@@ -412,7 +434,11 @@ const store = createStore(counterApp, initialState)
 
 # Workshop
 
-Front-end only app: <https://github.com/azat-co/react-quickly/tree/master/ch16/message-board>
+Front-end only app: <https://github.com/azat-co/universal-web/tree/master/code/message-board-workshop>
+
+Goal: Make it universal by adding code in place of TODOs.
+
+Requirements: MongoDB
 
 ---
 
@@ -422,5 +448,5 @@ Slides: <https://github.com/azat-co/universal-web>
 
 React book: <http://reactquickly.co>
 
-Workshop Solution: <https://github.com/azat-co/universal-web>
+Workshop solution: <https://github.com/azat-co/universal-web/tree/master/code/message-board>
 
